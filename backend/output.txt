@@ -1,0 +1,19 @@
+C:\Users\72782\AppData\Roaming\Python\Python310\site-packages\pydantic\_internal\_config.py:284: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.7/migration/
+  warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+<string>:1: ResourceWarning: unclosed file <_io.BufferedReader name='e:/D folder/Downloads/brain_tumor_project/brain_tumor_project/Testing/glioma_tumor/image(1).jpg'>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Program Files\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Program Files\Python310\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "e:\D folder\Downloads\brain_tumor_project\brain_tumor_project\backend\services\predictor.py", line 124, in run_prediction
+    detection_model = get_detection_model()
+  File "e:\D folder\Downloads\brain_tumor_project\brain_tumor_project\backend\services\model_loader.py", line 80, in get_detection_model
+    _load_models()
+  File "e:\D folder\Downloads\brain_tumor_project\brain_tumor_project\backend\services\model_loader.py", line 52, in _load_models
+    print(f"[ModelLoader] \U0001f680 Loading EfficientNet-B4 detection model from {eff_det_path}")
+  File "C:\Program Files\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 14: character maps to <undefined>

@@ -1,0 +1,19 @@
+{
+  "task": "detection",
+  "model": "efficientnet",
+  "best_val_f1": 0.7352719744024092,
+  "final_accuracy": 0.7363636363636363,
+  "final_precision": 0.7465454545454546,
+  "final_recall": 0.7363636363636363,
+  "final_f1": 0.7352719744024092,
+  "final_auc_roc": 0.8067080745341615,
+  "classes": [
+    "no_tumor",
+    "tumor"
+  ],
+  "augmentation": {
+    "mixup": false,
+    "cutmix": false,
+    "focal_loss": true
+  }
+}

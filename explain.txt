@@ -1,0 +1,65 @@
+NeuroScan AI v2.0 - Project Overview
+====================================
+
+NeuroScan AI is a prediction-focused medical imaging application for brain
+tumor detection and classification from MRI scans. The current project centers
+on MRI upload, AI inference, explainability, uncertainty estimation, and PDF
+report generation.
+
+1. TECHNOLOGY STACK
+-------------------
+- Frontend: React 18, Vite, Tailwind CSS, Framer Motion, Lucide Icons
+- Backend: FastAPI (Python 3.10+)
+- AI/ML/DL: PyTorch, Torchvision, OpenCV, Scikit-learn
+- Deployment: Uvicorn, Docker, Nginx
+
+2. CURRENT FEATURES
+-------------------
+- AI Tumor Detection: Binary classification (Tumor / No Tumor)
+- Tumor Classification: Multi-class (Glioma, Meningioma, Pituitary)
+- Explainability: Grad-CAM++, Score-CAM, and comparison strip
+- Bayesian Uncertainty: MC Dropout and Shannon entropy
+- Test-Time Augmentation (TTA): Original, flip, and brightness views
+- Clinical PDF Report generation
+- Responsive landing page and MRI analysis dashboard
+
+3. AI / MACHINE LEARNING ARCHITECTURE
+-------------------------------------
+- Backbone Models:
+  - EfficientNet-B4: Primary model
+  - ResNet101: Fallback model
+- Preprocessing:
+  - CLAHE contrast enhancement
+  - Skull strip simulation
+- Inference Pipeline:
+  - TTA
+  - MC Dropout
+  - Temperature scaling
+  - Explainability map generation
+  - Clinical risk analysis
+
+4. DIRECTORY STRUCTURE
+----------------------
+- /backend
+  - /models: EfficientNet-B4 and ResNet101 definitions
+  - /routes: Prediction endpoints
+  - /services: Predictor, preprocessing, Grad-CAM, risk analysis, reports
+  - train.py: Model training pipeline
+- /frontend
+  - /src/pages: LandingPage, DashboardPage
+  - /src/components: Navbar, ResultsPanel, ConfidenceBar, RiskBadge
+  - /src/services: Prediction API client
+- start_project.ps1: Local startup script
+
+5. USER FLOW
+------------
+1. Open the landing page or dashboard
+2. Upload an MRI image
+3. Backend preprocesses the image and runs inference
+4. Frontend shows prediction, confidence, uncertainty, and explainability maps
+5. User can download a clinical PDF report
+
+6. DISCLAIMER
+-------------
+NeuroScan AI is a decision-support tool for research and educational use.
+Results must be reviewed by a qualified medical professional.
